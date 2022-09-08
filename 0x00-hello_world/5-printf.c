@@ -1,11 +1,11 @@
 #include <stdio.h>
 /**
- * a C program that prints with proper grammer ,
- * but the outcome is a piece of art, followed by a new line.
- * using printf fucntion
+ * main - prints with proper grammer
+ * Return value of main: always return 0.
  */
 int main(void)
 {
 	printf("with proper grammar, but the outcome is a piece of art,\n");
+	/* always return 0*/
 	return (0);
 }
