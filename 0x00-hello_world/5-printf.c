@@ -1,7 +1,8 @@
 #include <stdio.h>
 /**
  * main - prints with proper grammer
- * Return value of main: always return 0.
+ *
+ * Return: always return 0.
  */
 int main(void)
 {
