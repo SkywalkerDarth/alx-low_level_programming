@@ -1,33 +1,30 @@
 #include <stdio.h>
 /**
- * main - program prints all possible different combinations of three digit
- * Numbers must be separated by ,, followed by a space
- * The three digits must be different
+ * main - Write a program that prints all possible different combinations
+ * of two digits.
  *
- * Return: return 0. thank you
+ * Return: return 0
  */
 int main(void)
 {
-	int digit0, digit1, digit2
+	int digit0, digit1;
 
-	for (digit0 = 0; digit0 < 8; digit0++)
+	for (digit0 = 0; digit1 < 9; digit0++)
 	{
-		for (digit1 = digit0 + 1; digit1 < 9; digit1++)
+		for (digit1 = digit0 + 1; digit1 < 10 ; digit1++)
 		{
-			for (digit2 = digit1 + 1; digit2 < 10; digit2++)
-			{
-				putchar((digit0 % 10) + '0');
-				putchar((digit1 % 10) + '0');
-				putchar((digit2 % 10) + '0');
+			putchar((digit0 % 10) + '0');
 
-		if (digit0 == 7 && digit1 == 8 && digit2 == 9)
+			putchar((digit1 % 10) + '0');
+
+		if (digit0 == 8 && digit 2 == 9)
 			continue;
 		putchar(',');
 		putchar(' ');
-		}
-			}
-				}
-		putchar('\n');
 
-		return (0);
+		}
+	}
+	putchar('\n');
+
+	return (0);
 }
