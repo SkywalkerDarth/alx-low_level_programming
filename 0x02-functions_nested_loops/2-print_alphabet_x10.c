@@ -1,14 +1,14 @@
 #include "main.h"
 
 /**
- * print_alphabet_x10 - check ALx
+ * print_alphabet_x10 - check Alx
  *
  * main - check the code.
  *
  * Return: always 0
  */
 
-void print_alphabet_x10(void);
+void print_alphabet_x10(void)
 {
 	char i;
 	int j;
