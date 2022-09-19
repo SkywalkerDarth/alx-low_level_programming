@@ -6,56 +6,28 @@
  * main - function to generate random password
  * Return: 0
  */
-
-void randomPasswordGeneration(int N)
-{
-	int i = 0;
-	int randomizer = 0;
-
-	srand((unsigned int)(time(NULL)));
-
-	char numbers[] = "0123456789";
-	char letter[] = "abcdefghijklmnoqprstuvwyzx";
-	char LETTER[] = "ABCDEFGHIJKLMNOQPRSTUYWVZX";
-	char symbols[] = "!@#$^&*?";
-	char password[N];
-
-	randomizer = rand() % 4;
-	for (i = 0; i < N; i++)
-	{
-		if (randomizer == 1)
-		{
-			password[i] = numbers[rand() % 10];
-			randomizer = rand() % 4;
-			printf("%c", password[i]);
-		}
-		else if (randomizer == 2)
-		{
-			password[i] = symbols[rand() % 8];
-			randomizer = rand() % 4;
-			printf("%c", password[i]);
-		}
-		else if (randomizer == 3)
-		{
-			password[i] = LETTER[rand() % 26];
-			randomizer = rand() % 4;
-			printf("%c", password[i]);
-		}
-		else
-		{
-			password[i] = letter[rand() % 26];
-			randomizer = rand() % 4;
-			printf("%c", password[i]);
-		}
-		}
-	}
 int main(void)
 {
-	int N;
+	int password[100];
+	int i, s, count;
 
-	N = 10;
+	count = 0;
 
-	randomPasswordGeneration(N);
+	srand(time(NULL));
 
+	for (i = 0; i < 100; i++)
+	{
+		password[i] = rand() % 98;
+		count += (password[i] + '0');
+		putchar(password[i] + '0');
+
+		if ((3000 - count) - '0' < 98)
+		{
+			s = 3000 - count - '0';
+			count += s;
+			putchar(s + '0');
+			break;
+		}
+	}
 	return (0);
 }
