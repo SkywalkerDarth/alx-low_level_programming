@@ -17,13 +17,13 @@ int main(void)
 
 	for (i = 0; i < 100; i++)
 	{
-		password[i] = rand() % 98;
+		password[i] = rand() % 78;
 		count += (password[i] + '0');
 		putchar(password[i] + '0');
 
-		if ((3000 - count) - '0' < 98)
+		if ((2772 - count) - '0' < 78)
 		{
-			s = 3000 - count - '0';
+			s = 2772 - count - '0';
 			count += s;
 			putchar(s + '0');
 			break;
