@@ -18,6 +18,4 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 
 		*(r + size_index) = (num % 10) + '0';
 		tens = num / 10;
-	}
-	if 
 }
