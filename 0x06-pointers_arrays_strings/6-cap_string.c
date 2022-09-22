@@ -7,34 +7,25 @@ int check_separators(char c);
  */
 char *cap_string(char *s)
 {
-	int i = 0;
+	int count = 0;
+	int i;
+	int sep_words[] = {32, 9, 10, 44, 59, 46, 33, 63, 34, 40, 41, 123, 125};
 
-	while (s[i])
+	if (*(s + count) >= 97 && *(s + count) <= 122)
+		*(s + count) = *(s + count) - 32;
+	count++;
+	while (*(s + count) != '\0')
 	{
-		if (i == 0 && (s[i] >= 'a' && s[i] <= 'z'))
-			s[i] -= 32;
-		if (check_separators(s[i]) && (s[i + 1] >= 'a' && s[i + 1] <= 'z'))
-			s[i + 1] -= 32;
-		i++;
+		for (i = 0; i < 13; i++)
+		{
+			if (*(s + count) == sep_words[i])
+			{
+				if ((*(s + (count + 1)) >= 97) && (*(s + (count + 1)) <= 122))
+					*(s + (count + 1)) = *(s + (count + 1)) - 32;
+				break;
+			}
+		}
+		count++;
 	}
 	return (s);
-}
-
-/**
- * run the check_separators
- * check_separators - Separators of words e.g space, comma, etc
- * @c: character input
- * Return: 1 if separator, else 0
- */
-int check_separators(char c)
-{
-	int i = 0;
-	char separators[13] = { ' ', '\t', '\n', ',', ';', '.', '!', '?', '"', '(', ')', '{', '}'};
-
-	for (; i < 13; i++)
-	{
-		if (c == separators[i])
-			return (1);
-	}
-	return (0);
 }
