@@ -1,8 +1,8 @@
-#include "main.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
- * main - a program that prints the number of arguments passed into it.
+ * main - Write a program that multiplies two numbers.
  * @argc: An argument counter
  * @argv: Argument values
  * Return: Always 0.
@@ -10,9 +10,19 @@
 
 int main(int argc, char *argv[])
 {
-	if (argv[0])
+	int i, j, z;
+
+	if (argc != 3)
 	{
-		printf("%d\n", argc - 1);
+		printf("Error\n");
+		return (1);
 	}
-	return (0);
+	else
+	{
+		i = atoi(argv[1]);
+		j = atoi(argv[2]);
+		z = i * j;
+		printf("%d\n", z);
+		return (0);
+	}
 }
