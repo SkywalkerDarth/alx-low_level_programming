@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * array_rangea funtion thay creates an array
+ * array_range - funtion thay creates an array
  * @min: input integer
  * @max: input integer
  * Return: pointer
