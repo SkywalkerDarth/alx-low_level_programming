@@ -1,10 +1,10 @@
-#ifndef _VARIADIC_FUNCTIONS_
-#define _VARIADIC_FUNCTIONS_
+#ifndef VARIADIC_FUNCTIONS_H
+#define VARIADIC_FUNCTIONS_H
 
 #include <stdarg.h>
-#include <stdio.h>
+
 /**
- * struct_printer - a new struct type defining a printer
+ * struct printer - a new struct type defining a printer
  * @symbol: A symbol representing data type
  * @print: A function pointer to a function that prints a data type
  * based on user selection
@@ -13,7 +13,7 @@
 typedef struct printer
 {
 	char *symbol;
-	void(*print)(va_list arg);
+	void (*print)(va_list arg);
 } printer_t;
 
 int _putchar(char c);
