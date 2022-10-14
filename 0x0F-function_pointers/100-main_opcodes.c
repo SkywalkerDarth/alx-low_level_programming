@@ -10,8 +10,7 @@
 int main(int argc, char *argv[])
 {
 	int bytes, i;
-	int (*address)(int, char**) = main;
-	unsigned char opcode;
+	unsigned char *func_ptr;
 
 	if (argc != 2)
 	{
@@ -25,19 +24,16 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(2);
 	}
+	func_ptr = (unsigned char *)main;
 
-	for (i = 0; i < bytes; i++)
+	i = 0;
+	if (bytes > 0)
 	{
-		opcode = *(unsigned char *)address;
-		printf("%.2x\n", opcode);
-		if (i == bytes - 1)
-			continue;
-		printf(" ");
-
-		address++;
+		while (i < (bytes - 1))
+		{
+			printf("%02hhx ", func_ptr[i++]);
+		}
+		printf("%hhx\n", func_ptr[i]);
 	}
-	printf("\n");
-
 	return (0);
-
 }
