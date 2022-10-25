@@ -1,8 +1,8 @@
 #include "lists.h"
 
 /**
- * freelist_int - A function that frees a linked list
- * @head - a pointer to linked listint_t structure
+ * free_list_int - A function that frees a linked list
+ * @head: a pointer to linked listint_t structure
  * Return: Nothing
  */
 void free_listint(listint_t *head)
