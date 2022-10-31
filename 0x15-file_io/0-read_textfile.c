@@ -2,7 +2,7 @@
 #include <sys/uio.h>
 
 /**
- * read_text_file - A function that reads a text file and prints to
+ * read_textfile - A function that reads a text file and prints to
  * POSIX STDOUT
  * @filename: The filename to be opened
  * @letters: the number of letters to read and print
